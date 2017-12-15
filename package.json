@@ -1,0 +1,13 @@
+{
+    "name": "chat-bot",
+    "version": "0.0.1",
+    "description": "Chatbot with socket.io",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "cookie-parser": "^1.4.3",
+        "express": "^4.16.2",
+        "multer": "^1.3.0",
+        "request": "^2.83.0",
+        "socket.io": "^2.0.4"
+    }
+}
