@@ -42,7 +42,7 @@ Or, from the browser, you may send a request in this way:
 `http://localhost:3100/parse?q=hello`
 
 
-#Frontend
+# Frontend
 The frontend is has some more trickery, mostly to give a nice feeling to the webapp. The server will always point to the `public` folder and would serve the file requested in the `index.html` file.
 The HTML structure is fairly simple, I added at the end a `message-template` div containing the HTML code for the single message bubble.
 The div also contains elements regarding the feedback, which is cloned everytime the bot sends a new reply and added on the "left" of the bot's avatar, and only shown when the "Help with the development" switch (made with `switchery.js`) is turned on.
