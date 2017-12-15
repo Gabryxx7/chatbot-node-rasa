@@ -40,3 +40,14 @@ Or you can send a request from Node, structured like this:
 ```
 Or, from the browser, you may send a request in this way:
 `http://localhost:3100/parse?q=hello`
+
+
+#Frontend
+The frontend is has some more trickery, mostly to give a nice feeling to the webapp. The server will always point to the `public` folder and would serve the file requested in the `index.html` file.
+The HTML structure is fairly simple, I added at the end a `message-template` div containing the HTML code for the single message bubble.
+The div also contains elements regarding the feedback, which is cloned everytime the bot sends a new reply and added on the "left" of the bot's avatar, and only shown when the "Help with the development" switch (made with `switchery.js`) is turned on.
+
+The CSS is also fairly simple, maybe the trickiest part was to make an animated check mark to confirm the feedback has been sent. Besides that there are some shadows here there to give a neat look and feeling to the app.
+
+The Javascript side `chat.js` is where everything happens. When the DOM is ready, socket.io is loaded and two listeners are open, waiting for messages to be received on the two channels.
+The function `appendMessage()` is the main one which creates the Message object from the newly received message and appends it to the conversation. 
