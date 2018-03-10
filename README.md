@@ -1,6 +1,8 @@
 # Rasa/Nodejs Chatbot
 The project features a simple Rasa NLU based Chatbot developed with Node.js, Express and Socket.io as backend and HTML, CSS and Javascript with Jquery on the frontend side.
 
+![alt text](https://raw.githubusercontent.com/Gabryxx7/chatbot-node-rasa/master/imgs/screenshot1.PNG)
+
 # Backend
 The backend side is quite simple. The server uses Socket.io for the communication between the user and the bot, everytime someone accesses the website, it will create a new socket and will immediately send out two greeting messages to the user.
 There are two channels, replyChannel and messageChannel, as the name says, the first one is used to manage the bot communication, it sends the bot answer and eventually receives the user's feedback; The message channel takes care of receiving the user message and send it to Rasa for processing.
@@ -43,6 +45,8 @@ Or, from the browser, you may send a request in this way:
 
 
 # Frontend
+![alt text](https://raw.githubusercontent.com/Gabryxx7/chatbot-node-rasa/master/imgs/screenshot2.PNG)
+
 The frontend is has some more trickery, mostly to give a nice feeling to the webapp. The server will always point to the `public` folder and would serve the file requested in the `index.html` file.
 The HTML structure is fairly simple, I added at the end a `message-template` div containing the HTML code for the single message bubble.
 The div also contains elements regarding the feedback, which is cloned everytime the bot sends a new reply and added on the "left" of the bot's avatar, and only shown when the "Help with the development" switch (made with `switchery.js`) is turned on.
